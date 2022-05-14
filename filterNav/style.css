@@ -61,3 +61,17 @@ ul.thc-home-filter > li.active::after {
 ul.thc-home-filter > li.active {
   font-weight: bolder;
 }
+
+ul.thc-home-products {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+ul.thc-home-products > li {
+  height: 200px;
+  width: 30%;
+  border: 1px solid #000;
+}
