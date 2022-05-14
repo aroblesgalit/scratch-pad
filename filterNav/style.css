@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.thc-home-section {
+  width: 100%;
+}
+
+.thc-home-bg-tricentisblue {
+  background-color: #004c97;
+}
+
+.thc-home-mb40 {
+  margin-bottom: 40px;
+}
+
+.thc-home-wrapper {
+  width: 100%;
+  max-width: 1500px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+ul.thc-home-filter {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.thc-home-filter > li {
+  font-family: 'museo-sans';
+  color: #fff;
+  font-weight: lighter;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+ul.thc-home-filter > li:hover,
+ul.thc-home-filter > li.active {
+  border-bottom: 4px solid #fff;
+}
