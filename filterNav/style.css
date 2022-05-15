@@ -63,16 +63,16 @@ ul.thc-home-filter > li.active {
 }
 
 ul.thc-home-products {
+  width: 100%;
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 40px;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
 ul.thc-home-products > li {
   height: 200px;
-  width: 30%;
+  width: 100%;
   border: 1px solid #000;
   display: flex;
   justify-content: center;
@@ -81,13 +81,14 @@ ul.thc-home-products > li {
 }
 
 @media only screen and (max-width: 768px) {
-  ul.thc-home-products > li {
-    width: 47.5%;
+  ul.thc-home-products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  ul.thc-home-products > li {
-    width: 100%;
+  ul.thc-home-products {
+    grid-template-columns: 1fr;
   }
 }
