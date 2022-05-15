@@ -67,7 +67,7 @@ ul.thc-home-products {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
+  row-gap: 40px;
 }
 
 ul.thc-home-products > li {
@@ -78,4 +78,16 @@ ul.thc-home-products > li {
   justify-content: center;
   align-items: center;
   font-size: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  ul.thc-home-products > li {
+    width: 47.5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  ul.thc-home-products > li {
+    width: 100%;
+  }
 }
