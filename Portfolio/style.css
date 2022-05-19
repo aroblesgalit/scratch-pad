@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  background-color: red;
+}
+
+header {
+  width: 340px;
+  padding: 80px 40px 80px 20px;
+  position: fixed;
+  height: 100%;
+  text-align: right;
+  background-color: #fff;
+}
+
+.uk-logo {
+  font-size: 5rem !important;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #666 !important;
+}
+
+.uk-nav,
+.socials {
+  margin-top: 80px !important;
+}
+
+.uk-nav li > a {
+  justify-content: flex-end;
+}
+
+main {
+  margin-left: 340px;
+  width: calc(100% - 340px);
+  padding: 80px 20px 80px 0;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
