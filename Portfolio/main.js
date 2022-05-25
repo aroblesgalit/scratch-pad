@@ -9,19 +9,20 @@ $(document).ready(function () {
 
   function renderAbout () {
     const html = `
-    <div class="wrapper">
-      <p>I'm a Web Developer with a Bachelor of Fine Arts in Graphic Design from Cal Poly Pomona and a 
-      Certificate of Completion of the Coding Bootcamp Certificate Program from the University of Texas 
-      at Austin. My skills are HTML, CSS, JavaScript, MongoDB, Express, React, and Node.js. My strengths 
-      are balancing design and functionality, collaboration, and time-management. During my time in the 
-      coding bootcamp, I completed projects, such as a full-stack application for teachers to effortlessly 
-      create and share multiple-choice and timed quizzes as well as for students to conveniently take them 
-      on their mobile. I applied aspects of UX/UI and agile development while working in a team of five. 
-      My enrollment in the bootcamp brought out a passion for coding as I was able to bring my designs to 
-      life. I'm driven and motivated to continue growing and learning. <br><br>
-
-      When I'm not coding, you can either find me drawing, exercising, hiking, or simply watching movies. 
-      Oh and I can also be doing some graphic design freelance work on the side.</p>
+    <div class="about wrapper">
+      <img src="https://via.placeholder.com/960x640">
+      <p>I'm a Frontend Web Developer from SoCal (Southern California). I
+      wasn't always a web developer. I was a Graphic Designer first with
+      focus on print and User Interface designs. I was 2-3 years deep when
+      I picked up an interest in the coding world. I realized, not only
+      did I enjoy designing UIs, but I also had a lot of fun with the
+      development process and building all the moving blocks to create
+      something functional. So at the beginning of the pandemic in 2020, I
+      decided to switch career and completed a coding bootcamp from the
+      University of Texas at Austin. I knew I made the right choice when
+      problem solving just clicks.</p>
+      <p>When I'm not coding, I enjoy drawing, working out, going on hikes,
+      or simply watching movies and eating sweets, lots of it.</p>
     </div>
     `
     $('main').html(html)
