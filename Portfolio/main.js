@@ -2,7 +2,7 @@ $(document).ready(function () {
   const mainDiv = $('main')
 
   function renderHome () {
-    const html = `<img src="https://via.placeholder.com/575x700" alt="Alvin Galit" />`
+    const html = `<img class="home" src="./images/hiking.jpg" alt="Alvin Galit" />`
     $('main').append(html)
   }
   renderHome()

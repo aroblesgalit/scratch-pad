@@ -41,3 +41,8 @@ main {
   padding: 80px 20px 80px 0;
   height: 100vh;
 }
+
+img.home {
+  width: 100%;
+  max-width: 700px;
+}
