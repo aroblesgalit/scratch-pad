@@ -1,15 +1,18 @@
 $(document).ready(function () {
   const mainDiv = $('main')
 
-  mainDiv.on('touchstart', function () {
+  mainDiv.on('mousedown touchstart', function (e) {
+    e.preventDefault()
     console.log('start')
   })
 
-  mainDiv.on('touchmove', function () {
+  mainDiv.on('mousemove touchmove', function (e) {
+    e.preventDefault()
     console.log('move')
   })
 
-  mainDiv.on('touchend', function () {
+  mainDiv.on('mouseup touchend', function (e) {
+    e.preventDefault()
     console.log('end')
   })
 })
