@@ -11,8 +11,9 @@ $(document).ready(function () {
     const html = `
     <div class="about wrapper">
       <img src="https://via.placeholder.com/960x640">
-      <p>I'm a Frontend Web Developer from SoCal (Southern California). I
-      wasn't always a web developer. I was a Graphic Designer first with
+      <p>I'm a Frontend Web Developer from SoCal (Southern California), 
+      but I didn't start off as a web developer. My first role right out 
+      of college was a Graphic Designer with
       focus on print and User Interface designs. I was 2-3 years deep when
       I picked up an interest in the coding world. I realized, not only
       did I enjoy designing UIs, but I also had a lot of fun with the
