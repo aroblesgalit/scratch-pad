@@ -29,6 +29,38 @@ $(document).ready(function () {
     $('main').html(html)
   }
 
+  function renderCode () {
+    const projects = [
+      {
+        name: 'ChampUnite',
+        description:
+          'A full-stack MERN game app where users go on a one-on-one card battle.',
+        image:
+          'https://www.alvingalit.com/static/media/champUnite.89686fab.png',
+        github: 'https://github.com/aroblesgalit/champ-unite',
+        live: 'https://champ-unite-v01.herokuapp.com/'
+      },
+      {
+        name: 'Artist Web App',
+        description:
+          'A web app for an artist to show off his/her work as well as sell art.',
+        image:
+          'https://www.alvingalit.com/static/media/artistWebApp.ce5141e4.jpg',
+        github: 'https://github.com/aroblesgalit/artist-web-app',
+        live: 'https://artist-web-app.herokuapp.com/'
+      },
+      {
+        name: 'Digital Class',
+        description:
+          'A full-stack MERN app allowing teachers to quickly and easily create and assign quizzes.',
+        image:
+          'https://www.alvingalit.com/static/media/digitalClass.50b4c601.png',
+        github: 'https://github.com/aroblesgalit/digital-class',
+        live: 'https://digital-class-production.herokuapp.com/'
+      }
+    ]
+  }
+
   $('.uk-nav > li').click(function (e) {
     e.preventDefault()
     const navItem = $(this).text()
