@@ -59,6 +59,17 @@ $(document).ready(function () {
         live: 'https://digital-class-production.herokuapp.com/'
       }
     ]
+    let cards = ''
+    $.each(
+      projects,
+      (i, val) => (cards = cards + ('<div><h4>' + val.name + '</h4></div>'))
+    )
+    const html = `
+      <div class="code wrapper">
+        ${cards}
+      </div>
+    `
+    $('main').html(html)
   }
 
   $('.uk-nav > li').click(function (e) {
@@ -66,8 +77,10 @@ $(document).ready(function () {
     const navItem = $(this).text()
     switch (navItem) {
       case 'about':
-        console.log(navItem)
         renderAbout()
+        break
+      case 'code':
+        renderCode()
         break
       default:
         renderHome()
