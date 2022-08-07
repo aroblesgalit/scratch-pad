@@ -194,9 +194,9 @@
       border-radius: 4px;
       text-transform: uppercase;
     }
-    button[type='button'].selected {
+    /* button[type='button'].selected {
       background-color: rgb(207, 207, 207);
-    }
+    } */
     button[type='button'].includes {
       background-color: #fcc751;
       color: #212429;
@@ -458,11 +458,9 @@
                   if (dataType === 'array') {
                     // check if correct word
                     if (guess === wordOfTheDay) {
-                      updateUI(currentArr);
-                      // DISABLE KEYBOARD
-                    } else {
-                      updateUI(currentArr);
+                      $('.keyboard').addClass('no-click');
                     }
+                    updateUI(currentArr);
                     // Go to next row
                     currentRow++;
                     // Reset buttons pressed list
