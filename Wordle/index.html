@@ -622,6 +622,8 @@
             if (corrects.length == wordOfTheDayCount[letter]) {
               console.log('number of correct guesses is equal to number of this letter in the actual word')
               currentGuessState[index].state = 'wrong';
+            } else if (corrects.length == 0 && includes.length > wordOfTheDayCount[letter]) {
+              currentGuessState[index].state = 'wrong';
             }
             console.log('===============================================')
           }
