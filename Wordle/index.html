@@ -382,9 +382,7 @@
         </div>
 
         <!-- Alert -->
-        <div class="alert">
-            <p>Not in list.</p>
-        </div>
+        <div class="alert"><p><!-- COPY GOES HERE --></p></div>
 
       </main>
       <div class="btn-container w-100 mb-3 px-3 text-center">
@@ -401,7 +399,7 @@
     $(document).ready(function() {
       // Words
       const words = [
-        'walls',
+        'store',
         'media',
         'saves',
         'joins'
@@ -458,6 +456,8 @@
                   if (dataType === 'array') {
                     // check if correct word
                     if (guess === wordOfTheDay) {
+                      // SHOW ALERT SAYING WORD IS NOT IN LIST
+                      showAlert('Winner!');
                       $('.keyboard').addClass('no-click');
                     }
                     updateUI(currentArr);
@@ -468,11 +468,8 @@
                   } else {
                     console.log('This is NOT a word.')
                     resetRowUI();
-                    // SHOW POP UP SAYING WORD IS NOT IN LIST
-                    $('.alert').addClass('fadein');
-                    setTimeout(function() {
-                        $('.alert').removeClass('fadein');
-                    }, 1500);
+                    // SHOW ALERT SAYING WORD IS NOT IN LIST
+                    showAlert('Not in list.');
                   }
               });
             }
@@ -509,19 +506,16 @@
             }
           }
         }
-        // if letter key is pressed
-          // collect into array up to 5 letters
-        // if enter key is pressed 
-          // only works if 5 letters
-          // if a word using API dictionary
-            // check if word of the day
-            // check letters if correct
-            // if not the word of the day
-              // go to next row/try
-            // if word of the day, go to next screen
-        // if backspace key is pressed
-          // remove last item in the array as long as lenght is >= 1
       });
+
+      // Show alert
+      function showAlert(copy) {
+        $('.alert p').text(copy);
+        $('.alert').addClass('fadein');
+        setTimeout(function() {
+            $('.alert').removeClass('fadein');
+        }, 1500);
+      }
 
       // Reset UI
       function resetRowUI() {
