@@ -44,7 +44,15 @@ button::after {
     top: 20px;
 }
 
+.active button::after {
+    content: '-'
+}
+
 .info {
     display: none;
     padding: 0 0 20px;
+}
+
+.active .info {
+    display: block;
 }
