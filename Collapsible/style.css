@@ -45,7 +45,7 @@ button::after {
 }
 
 .active button::after {
-    content: '-'
+    content: '–'
 }
 
 .info {
@@ -56,3 +56,7 @@ button::after {
 .active .info {
     display: block;
 }
+
+
+
+

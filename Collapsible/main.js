@@ -1,8 +1,8 @@
-const collapsibles = document.querySelectorAll(".collapsible");
+const collapsibles = document.querySelectorAll(".heading");
 console.log(collapsibles);
 
 for (let i = 0; i < collapsibles.length; i++) {
   collapsibles[i].addEventListener("click", function () {
-    this.classList.toggle("active");
+    this.parentElement.classList.toggle("active");
   });
 }
