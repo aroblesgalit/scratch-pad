@@ -7,13 +7,49 @@
     <title>Slick Slider</title>
     <link rel="stylesheet" type="text/css" href="slick.css" />
     <link rel="stylesheet" type="text/css" href="slick-theme.css" />
+    <style>
+      main {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: aliceblue;
+      }
+      .slider {
+        height: 300px;
+        width: 100%;
+        max-width: 300px;
+        background-color: rgb(159, 193, 221);
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+      .slider div {
+        height: 100%;
+        width: 100%;
+      }
+      .btn-container {
+      }
+      .btn-container > button {
+        all: revert;
+      }
+      .btn-container > button::before {
+        all: revert;
+      }
+    </style>
   </head>
   <body>
     <main>
-      <div class="slide">
+      <div class="slider single-item">
         <div>One</div>
         <div>Two</div>
         <div>Three</div>
+      </div>
+
+      <div class="btn-container">
+        <button type="button" class="slick-prev">Previous</button>
+        <button type="button" class="slick-next">Next</button>
       </div>
     </main>
     <script
@@ -23,7 +59,21 @@
     <script type="text/javascript" src="slick.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $(".slide").slick({});
+        $(".slider").slick({
+          dots: true,
+          infinite: false,
+          speed: 500,
+          arrows: true,
+          slideToShow: 1,
+          nextArrow: $(".slick-next"),
+          prevArrow: $(".slick-prev"),
+        });
+        // $(".slick-prev").click(function () {
+        //   $(".slider").slickPrev();
+        // });
+        // $(".slick-next").click(function () {
+        //   $(".slider").slickNext();
+        // });
       });
     </script>
   </body>
