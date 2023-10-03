@@ -14,6 +14,7 @@
       width: 100%;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -24,16 +25,35 @@
       padding: 32px 64px;
       border-radius: 16px;
     }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <main>
+  <main id="my-node">
     <h1>HTML to Image</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eligendi, 
       cum reiciendis nobis maxime natus error illum consectetur? Facilis odio, 
       ad at aliquid cum minima maxime ut iusto. Obcaecati, at.</p>
   </main>
+  <button id="btnDownload">Download</button>
 
   <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js" integrity="sha512-WiGQZv8WpmQVRUFXZywo7pHIO0G/o3RyiAJZj8YXNN4AV7ReR1RYWVmZJ6y3H06blPcjJmG/sBpOVZjTSFFlzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const node = document.getElementById('my-node');
+    const btn = document.getElementById('btnDownload');
+    let img;
+
+    btn.addEventListener('click', function() {
+      htmlToImage.toPng(node)
+      .then(function(dataUrl) {
+        download(dataUrl, 'my-node.png');
+      });
+    });
+  </script>
 </body>
 </html>
