@@ -39,19 +39,43 @@
       cum reiciendis nobis maxime natus error illum consectetur? Facilis odio, 
       ad at aliquid cum minima maxime ut iusto. Obcaecati, at.</p>
   </main>
-  <button id="btnDownload">Download</button>
+  <button id="btnShare">Share</button>
 
   <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js" integrity="sha512-WiGQZv8WpmQVRUFXZywo7pHIO0G/o3RyiAJZj8YXNN4AV7ReR1RYWVmZJ6y3H06blPcjJmG/sBpOVZjTSFFlzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
+    // References to DOM elements
     const node = document.getElementById('my-node');
-    const btn = document.getElementById('btnDownload');
+    const btn = document.getElementById('btnShare');
     let img;
 
+    // Helper function: generate a new file from base64 String
+    const dataURLtoFile = (dataurl, filename) => {
+      const arr = dataurl.split(',')
+      const mime = arr[0].match(/:(.*?);/)[1]
+      const bstr = atob(arr[1])
+      let n = bstr.length
+      const u8arr = new Uint8Array(n)
+      while (n) {
+        u8arr[n - 1] = bstr.charCodeAt(n - 1)
+        n -= 1 // to make eslint happy
+      }
+      return new File([u8arr], filename, { type: mime })
+    }
+
+    // Create the image and share to social media
     btn.addEventListener('click', function() {
       htmlToImage.toPng(node)
       .then(function(dataUrl) {
-        download(dataUrl, 'my-node.png');
+        // download(dataUrl, 'my-node.png');
+        const file = dataURLtoFile(dataUrl, 'my-node.png');
+        const data = {
+          // url: dataUrl,
+          text: 'Check out my stuff!',
+          title: 'My stuff',
+          files: [file]
+        }
+        navigator.share(data)
       });
     });
   </script>
